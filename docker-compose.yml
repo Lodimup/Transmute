@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  redis:
+    image: redislabs/redismod
+    restart: always
+    networks:
+      - redisnet
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+  messenger:
+    build:
+      context: app
+      dockerfile: Dockerfile_messenger
+    networks:
+      - redisnet
+    environment:
+      - RDB_HOST=redis
+    depends_on:
+      - redis
+  server:
+    build:
+      context: app
+      dockerfile: Dockerfile_server
+    networks:
+      - redisnet
+    environment:
+      # - FLASK_APP=server.py
+      - RDB_HOST=redis
+    ports:
+      - 3333:4444
+    depends_on:
+      - redis
+networks:
+  redisnet:
