@@ -23,7 +23,7 @@ websocket must remain open
 ```python
 git clone <https://github.com/Lodimup/Transmute.git>
 cd Transmute
-docker compose build --no-cahce && docker compose up -d
+docker compose build --no-cache && docker compose up -d
 // if you want to see what's going on inside remove -d flag like so:
 docker compose build && docker compose up
 
