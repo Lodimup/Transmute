@@ -18,6 +18,12 @@ websocket must remain open
 -   Never serve stale data
 -   Docker compose
 
+# What's next?
+- Dynamic routing, on any valid symbol
+- Additional stream types
+- Auto spawn socket process based on request
+- Auto de-spawn socket when not used
+- Upgrade to Django
 # Usage
 
 ```python
