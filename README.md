@@ -39,8 +39,8 @@ Then
 
 open  [](http://localhost:3333/)[http://localhost:3333](http://localhost:3333/)  in your favorite browser
 
-POST  [](http://127.0.0.1:3333/snapshot/BTC_USDT)[http://127.0.0.1:3333/snapshot/BTC_USDT](http://127.0.0.1:3333/snapshot/BTC_USDT)  using Postman
-NOTICE: It SHOULD bet GET here, but the person given this challenge explicitly requested POST to be swapped with GET.
+POST  [](http://127.0.0.1:3333/snapshot/BTC_USDT)[http://127.0.0.1:3333/snapshot/BTC_USDT](http://127.0.0.1:3333/snapshot/BTC_USDT)  using Postman  
+NOTICE: It SHOULD be GET here, but the person given this challenge explicitly requested POST to be swapped with GET.
   
 Try GET  [](http://127.0.0.1:3333/snapshot/BTC_USDT)[http://127.0.0.1:3333/snapshot/BTC_USDT](http://127.0.0.1:3333/snapshot/BTC_USDT)  it will return an error 400
 
